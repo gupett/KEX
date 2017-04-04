@@ -1,0 +1,7 @@
+# Ignore from OSX
+.DS_Store
+
+# Ignore from xcode
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
