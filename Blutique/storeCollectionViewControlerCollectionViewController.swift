@@ -29,6 +29,10 @@ class StoreCollectionViewControlerCollectionViewController: UICollectionViewCont
 
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        //Test add for commit
+        print("hope this works")
+        
         super.viewWillAppear(animated)
         
         if logedIn == false{
