@@ -32,6 +32,8 @@ class StoreCollectionViewControlerCollectionViewController: UICollectionViewCont
         
         //Test add for commit
         print("hope this works")
+        //test for test bransh
+        print("incredible")
         
         super.viewWillAppear(animated)
         
