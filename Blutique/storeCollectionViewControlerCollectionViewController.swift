@@ -30,10 +30,8 @@ class StoreCollectionViewControlerCollectionViewController: UICollectionViewCont
     
     override func viewDidAppear(_ animated: Bool) {
         
-        //Test add for commit
-        print("hope this works")
-        //test for test bransh
-        print("incredible")
+        //Best func yet
+        print("hope hope hope")
         
         super.viewWillAppear(animated)
         
