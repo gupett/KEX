@@ -17,6 +17,7 @@ class LogInView: UIView {
 
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var passWord: UITextField!
+    var testVariabel : String!
     
    
     var delegate: LogInDelegate?
