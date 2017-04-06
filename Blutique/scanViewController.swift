@@ -15,6 +15,8 @@ class ScanViewController: RSCodeReaderViewController {
     @IBOutlet weak var showMenu: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Test function
+        print("super func")
         
         self.focusMarkLayer.strokeColor = UIColor.red.cgColor
         
