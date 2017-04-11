@@ -1,4 +1,5 @@
 PODS:
+  - BarcodeScanner (2.0.0)
   - Firebase (3.15.0):
     - Firebase/Core (= 3.15.0)
   - Firebase/Auth (3.15.0):
@@ -29,14 +30,14 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.9)
-  - RSBarcodes_Swift (3.0.3)
 
 DEPENDENCIES:
+  - BarcodeScanner
   - Firebase
   - Firebase/Auth
-  - RSBarcodes_Swift (~> 3.0)
 
 SPEC CHECKSUMS:
+  BarcodeScanner: 266ab4b479d407b74bc4b473fa5020b4523ad9e3
   Firebase: 2b1cdfba1cda8589f32904a697cc753322bff9d8
   FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
   FirebaseAuth: cc8a1824170adbd351edb7f994490a3fb5c18be6
@@ -44,8 +45,7 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
-  RSBarcodes_Swift: 3b4a9c2e81fe9f435a26f18a1b8b826665e7cf89
 
-PODFILE CHECKSUM: 9f54e324356d856f060064b3e515106ed1b7e4c5
+PODFILE CHECKSUM: c523e3ae9e84e1ff64a34503e154355f1b02187d
 
 COCOAPODS: 1.2.0

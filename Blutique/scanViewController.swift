@@ -7,31 +7,19 @@
 //
 
 import UIKit
-import RSBarcodes_Swift
+import BarcodeScanner
 import AVFoundation
 
-class ScanViewController: RSCodeReaderViewController {
+class ScanViewController: BarcodeScannerController  {
 
     @IBOutlet weak var showMenu: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         //Test function
-        print("super func")
-        
-        self.focusMarkLayer.strokeColor = UIColor.red.cgColor
-        
-        self.cornersLayer.strokeColor = UIColor.yellow.cgColor
-        
-        self.tapHandler = { point in
-            print(point)
-        }
-        
-        self.barcodesHandler = { barcodes in
-            for barcode in barcodes {
-                print("Barcode found: type=" + barcode.type + " value=" + barcode.stringValue)
-            }
-        }
-        
+        // setting up barcode scanner
+        super.codeDelegate = self
+        super.errorDelegate = self
+        super.dismissalDelegate = self
         
         // Set up action for menuButton, all functionality is provider in SWrecealViewController
        
@@ -57,4 +45,35 @@ class ScanViewController: RSCodeReaderViewController {
     }
     */
 
+}
+
+// MARK: - Delegate functions for barcode scanner
+// Data handeler
+extension ScanViewController: BarcodeScannerCodeDelegate {
+    
+    func barcodeScanner(_ controller: BarcodeScannerController, didCaptureCode code: String, type: String) {
+        print(code)
+        print(type)
+        
+        let delayTime = DispatchTime.now() + Double(Int64(6 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: delayTime) {
+            controller.resetWithError()
+        }
+    }
+}
+
+// Error handeler
+extension ScanViewController: BarcodeScannerErrorDelegate {
+    
+    func barcodeScanner(_ controller: BarcodeScannerController, didReceiveError error: Error) {
+        print(error)
+    }
+}
+
+// Handeler when the barcode scanner is dismissed
+extension ScanViewController: BarcodeScannerDismissalDelegate {
+    
+    func barcodeScannerDidDismiss(_ controller: BarcodeScannerController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
 }

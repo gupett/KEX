@@ -11,6 +11,6 @@ pod 'Firebase'
 
 pod ‘Firebase/Auth’
 
-pod ‘RSBarcodes_Swift’,’~>3.0’
+pod 'BarcodeScanner'
 
 end
