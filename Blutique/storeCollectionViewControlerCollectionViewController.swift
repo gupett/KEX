@@ -64,7 +64,7 @@ class StoreCollectionViewControlerCollectionViewController: UICollectionViewCont
         logInView.delegate = self
         
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         // check to see if user is loged in
         if logedIn == false{
@@ -96,19 +96,38 @@ class StoreCollectionViewControlerCollectionViewController: UICollectionViewCont
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 3
+        return nearBeacons.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as UICollectionViewCell
-    
-        // Configure the cell
-        cell.layer.cornerRadius = 110
-        cell.backgroundColor = UIColor.black
-        print("creating cell")
         
+        let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as UICollectionViewCell
         
-        return cell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? StoreCollectionViewCell{
+            
+            // Find near beacons from store list and set image to that store
+            let id = nearBeacons[indexPath.row]
+            for store in StoreDataList {
+                if id == store.nameSpace{
+                    print("setting up image")
+                    cell.logoImage.image = store.logoImage
+                    //logoImage.image = store.logoImage
+                    
+                    
+                }
+            }
+            
+            
+        
+            // Configure the cell
+            cell.layer.cornerRadius = 110
+            cell.layer.borderColor = UIColor.black.cgColor
+            cell.layer.borderWidth = 2
+            
+            return cell
+            
+        }
+       return cell1
     }
 
     // MARK: UICollectionViewDelegate
