@@ -28,6 +28,9 @@ public protocol BarcodeScannerDismissalDelegate: class {
  - Not found error message
  */
 open class BarcodeScannerController: UIViewController {
+    
+    // Variable to be checked when a product has been BarcodeScannerErrorDelegate
+   public var pause = false
 
   /// Video capture device.
   lazy var captureDevice: AVCaptureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
@@ -86,6 +89,11 @@ open class BarcodeScannerController: UIViewController {
   /// The current controller's status mode.
   var status: Status = Status(state: .scanning) {
     didSet {
+        // whwt top do when the state is paused
+        if status.state == .paused{
+            self.infoView.status = self.status
+        }
+        
       let duration = status.animated &&
         (status.state == .processing
           || oldValue.state == .processing
@@ -110,8 +118,14 @@ open class BarcodeScannerController: UIViewController {
 
       UIView.animate(withDuration: duration,
         animations: {
-          self.infoView.frame = self.infoFrame
-          self.infoView.status = self.status
+            
+          // if the scanner should go in to pause mode animate away the entire infoView
+          if self.pause {
+            self.infoView.frame.origin.y = self.view.frame.maxY + 10
+          }else{
+            self.infoView.frame = self.infoFrame
+            self.infoView.status = self.status
+          }
         },
         completion: { _ in
           if delayReset {
@@ -121,6 +135,13 @@ open class BarcodeScannerController: UIViewController {
           self.infoView.layer.removeAllAnimations()
           if self.status.state == .processing {
             self.infoView.animateLoading()
+          }
+            
+          // If a product has been found the scanner will be asked to stop scanning
+          if self.pause {
+            self.pause = false
+            self.infoView.isHidden = true
+            self.pauseMode()
           }
       })
     }
@@ -291,6 +312,25 @@ open class BarcodeScannerController: UIViewController {
     status = Status(state: .scanning, animated: animated)
   }
 
+  // Called when the view displays product information and the scanner needs to be paused
+  public func pauseMode(){
+    torchMode = .off
+    locked = true
+    
+    flashButton.alpha = 0
+    focusView.alpha = 0
+    
+    captureSession.stopRunning()
+
+    settingsButton.isHidden = status.state != .unauthorized
+  }
+   
+  // called when the pause is ended and scaning should begin again
+  public func unPause(){
+    self.infoView.isHidden = false
+    self.reset()
+  }
+    
   /**
    Resets the current state.
    */
@@ -303,7 +343,7 @@ open class BarcodeScannerController: UIViewController {
     status.state == .scanning
       ? captureSession.startRunning()
       : captureSession.stopRunning()
-
+    
     focusView.alpha = alpha
     flashButton.alpha = alpha
     settingsButton.isHidden = status.state != .unauthorized
@@ -433,9 +473,11 @@ extension BarcodeScannerController: AVCaptureMetadataOutputObjectsDelegate {
       else { return }
 
     if isOneTimeSearch {
+    
       locked = true
     }
-
+    
+    // to display the searching window
     animateFlash(whenProcessing: isOneTimeSearch)
     codeDelegate?.barcodeScanner(self, didCaptureCode: code, type: metadataObj.type)
   }

@@ -36,7 +36,9 @@ struct Status {
  Barcode scanner state.
  */
 enum State {
-  case scanning, processing, unauthorized, notFound
+    
+    // Paused is a new state for when products are displayed
+  case scanning, processing, unauthorized, notFound, paused
 
   typealias Styles = (tint: UIColor, font: UIFont, alignment: NSTextAlignment)
 
@@ -53,6 +55,8 @@ enum State {
       string = Info.settingsText
     case .notFound:
       string = Info.notFoundText
+    case .paused:
+        string = ""
     }
 
     return string
@@ -87,6 +91,12 @@ enum State {
         font: Info.loadingFont,
         alignment: .center
       )
+    case .paused:
+        styles = (
+            tint: Info.tint,
+            font: Info.font,
+            alignment: .left
+        )
     }
 
     return styles

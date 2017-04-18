@@ -80,7 +80,7 @@ class StoreCollectionViewControlerCollectionViewController: UICollectionViewCont
             showMenu.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             // Set up the width of sidemenu
-            self.revealViewController().rearViewRevealWidth = 150
+            self.revealViewController().rearViewRevealWidth = self.view.bounds.width * 0.5
         }
         
 

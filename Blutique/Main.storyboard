@@ -15,7 +15,7 @@
         <scene sceneID="oK8-D1-HjX">
             <objects>
                 <collectionViewController id="tgY-5N-h5m" customClass="StoreCollectionViewControlerCollectionViewController" customModule="Blutique" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="da5-V9-Hmc">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="da5-V9-Hmc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -27,7 +27,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="H9v-rZ-Xg9" customClass="StoreCollectionViewCell" customModule="Blutique" customModuleProvider="target">
-                                <rect key="frame" x="78" y="0.0" width="220" height="220"/>
+                                <rect key="frame" x="77.5" y="0.0" width="220" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="220" height="220"/>
@@ -68,7 +68,7 @@
                 <view contentMode="scaleToFill" id="za1-Q7-fHa">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" id="J9H-ES-CMC" customClass="CreateAccountView" customModule="Blutique" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="360"/>
@@ -109,7 +109,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69052333047945202" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="Jw8-Hv-BlB" firstAttribute="top" secondItem="Bhu-iv-cpp" secondAttribute="bottom" constant="8" id="01h-nQ-Q97"/>
                         <constraint firstItem="CXf-Sg-ggr" firstAttribute="top" secondItem="y4F-cK-xF2" secondAttribute="bottom" constant="14" id="IkS-3w-W6Y"/>
@@ -162,7 +162,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.68999999999999995" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="zxp-96-ZRK" firstAttribute="centerX" secondItem="iIT-RS-CCD" secondAttribute="centerX" id="HIM-mw-xoL"/>
                         <constraint firstItem="zxp-96-ZRK" firstAttribute="leading" secondItem="kgo-Ea-ScL" secondAttribute="leading" id="KjQ-Km-b4w"/>
