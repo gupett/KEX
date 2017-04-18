@@ -26,7 +26,7 @@
 		6F459BE01E9F79E900B3F3C2 /* StoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F459BDF1E9F79E900B3F3C2 /* StoreCollectionViewCell.swift */; };
 		6F4C25AE1E8BB9770080D9F4 /* storeCollectionViewControlerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C25AD1E8BB9770080D9F4 /* storeCollectionViewControlerCollectionViewController.swift */; };
 		6F4C25B01E8BF2FE0080D9F4 /* scanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C25AF1E8BF2FE0080D9F4 /* scanViewController.swift */; };
-		6F525BAF1E9FC30300AFDEE5 /* NetWOrkObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F525BAE1E9FC30300AFDEE5 /* NetWOrkObject.swift */; };
+		6F525BAF1E9FC30300AFDEE5 /* FindBarcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F525BAE1E9FC30300AFDEE5 /* FindBarcode.swift */; };
 		6F525BB21E9FFB4500AFDEE5 /* ProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F525BB11E9FFB4500AFDEE5 /* ProductView.xib */; };
 		6F6C877E1E8CFEA3000B3156 /* tool_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6C877D1E8CFEA3000B3156 /* tool_extensions.swift */; };
 		6FA46CD11E91263B00B02FF0 /* StoreMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA46CD01E91263B00B02FF0 /* StoreMenuTableViewController.swift */; };
@@ -78,7 +78,7 @@
 		6F459BDF1E9F79E900B3F3C2 /* StoreCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewCell.swift; sourceTree = "<group>"; };
 		6F4C25AD1E8BB9770080D9F4 /* storeCollectionViewControlerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storeCollectionViewControlerCollectionViewController.swift; sourceTree = "<group>"; };
 		6F4C25AF1E8BF2FE0080D9F4 /* scanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scanViewController.swift; sourceTree = "<group>"; };
-		6F525BAE1E9FC30300AFDEE5 /* NetWOrkObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWOrkObject.swift; sourceTree = "<group>"; };
+		6F525BAE1E9FC30300AFDEE5 /* FindBarcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindBarcode.swift; sourceTree = "<group>"; };
 		6F525BB11E9FFB4500AFDEE5 /* ProductView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductView.xib; sourceTree = "<group>"; };
 		6F6C877D1E8CFEA3000B3156 /* tool_extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tool_extensions.swift; sourceTree = "<group>"; };
 		6FA46CD01E91263B00B02FF0 /* StoreMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreMenuTableViewController.swift; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 		6F525BAD1E9FC2E400AFDEE5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				6F525BAE1E9FC30300AFDEE5 /* NetWOrkObject.swift */,
+				6F525BAE1E9FC30300AFDEE5 /* FindBarcode.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -469,7 +469,7 @@
 				6F6C877E1E8CFEA3000B3156 /* tool_extensions.swift in Sources */,
 				6F0406D81E8AFF9000D7E348 /* CreateAccountView.swift in Sources */,
 				6F17C94B1E4FB6C90009D126 /* AppDelegate.swift in Sources */,
-				6F525BAF1E9FC30300AFDEE5 /* NetWOrkObject.swift in Sources */,
+				6F525BAF1E9FC30300AFDEE5 /* FindBarcode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

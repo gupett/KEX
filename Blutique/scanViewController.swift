@@ -89,7 +89,7 @@ extension ScanViewController: BarcodeScannerCodeDelegate {
         
         // network opperation should be called and no async main queue, it is just for ilustrations when there is no network-op
         DispatchQueue.main.asyncAfter(deadline: delayTime - 1){
-            if findBarcode.findBarcode(code: code) {
+            if FindBarcode.findBarcode(code: code) {
                 controller.pause = true
                 controller.reset(animated: true)
                 

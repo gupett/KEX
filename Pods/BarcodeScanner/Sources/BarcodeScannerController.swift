@@ -89,10 +89,6 @@ open class BarcodeScannerController: UIViewController {
   /// The current controller's status mode.
   var status: Status = Status(state: .scanning) {
     didSet {
-        // whwt top do when the state is paused
-        if status.state == .paused{
-            self.infoView.status = self.status
-        }
         
       let duration = status.animated &&
         (status.state == .processing

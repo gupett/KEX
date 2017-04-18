@@ -10,7 +10,7 @@ import Foundation
 
 let productCodes = ["9780130676344", "77988908"]
 
-class findBarcode{
+class FindBarcode{
     static func findBarcode(code: String) -> Bool{
         for product in productCodes{
             if product == code{
