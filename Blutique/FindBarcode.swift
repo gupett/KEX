@@ -8,15 +8,14 @@
 
 import Foundation
 
-let productCodes = ["9780130676344", "77988908"]
+let productCodes = ["9780130676344": Product(_image: UIImage(named: "Nike_shoe")!, _description: "Very nice shoe made for all type of activities")]
 
 class FindBarcode{
-    static func findBarcode(code: String) -> Bool{
-        for product in productCodes{
-            if product == code{
-                return true
-            }
+    static func findBarcode(code: String) -> Product?{
+        
+        if let product = productCodes[code]{
+            return product
         }
-        return false
+        return nil
     }
 }

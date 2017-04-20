@@ -89,14 +89,14 @@ extension ScanViewController: BarcodeScannerCodeDelegate {
         
         // network opperation should be called and no async main queue, it is just for ilustrations when there is no network-op
         DispatchQueue.main.asyncAfter(deadline: delayTime - 1){
-            if FindBarcode.findBarcode(code: code) {
+            if let product = FindBarcode.findBarcode(code: code) {
                 controller.pause = true
                 controller.reset(animated: true)
                 
                 self.productFound = true
                 self.scanner = controller
                
-                self.showProductView()
+                self.showProductView(product: product)
             }
             
         }
@@ -110,20 +110,21 @@ extension ScanViewController: BarcodeScannerCodeDelegate {
     }
     
     // Instantiate view showing product Information
-    func showProductView(){
+    func showProductView(product: Product){
         if let viewPr = Bundle.main.loadNibNamed("ProductView", owner: self, options: nil)?.first as? ProductView{
             productView = viewPr
             productView?.frame.size.height = self.view.frame.height * 0.80 - (self.navigationController?.navigationBar.frame.height)!
             productView?.frame.size.width = self.view.frame.width * 0.85
             
-            productView?.productImage.image = UIImage(named: "Nike_shoe")
-            productView?.productInfo.text = "hfjdkafhl jhdfskahf jdfhjaksh kjhsdfjkhdsa fjkhdjkha"
+            productView?.productImage.image = product.image
+            productView?.productInfo.text = product.description
             productView?.productInfo.isEditable = false
             productView?.layer.cornerRadius = 5
             productView?.center = self.view.center
             productView?.center.y = self.view.center.y + (self.navigationController?.navigationBar.frame.height)! / 2
             self.view.addSubview((productView)!)
             
+            // Creating a dismiss button
             let radius: CGFloat = 15
             let xPos = (productView?.frame.minX)! - radius
             let yPos = (productView?.frame.minY)! - radius

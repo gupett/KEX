@@ -28,6 +28,7 @@
 		6F4C25B01E8BF2FE0080D9F4 /* scanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C25AF1E8BF2FE0080D9F4 /* scanViewController.swift */; };
 		6F525BAF1E9FC30300AFDEE5 /* FindBarcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F525BAE1E9FC30300AFDEE5 /* FindBarcode.swift */; };
 		6F525BB21E9FFB4500AFDEE5 /* ProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F525BB11E9FFB4500AFDEE5 /* ProductView.xib */; };
+		6F60D8B11EA60CBF002CE987 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F60D8B01EA60CBF002CE987 /* Product.swift */; };
 		6F6C877E1E8CFEA3000B3156 /* tool_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6C877D1E8CFEA3000B3156 /* tool_extensions.swift */; };
 		6FA46CD11E91263B00B02FF0 /* StoreMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA46CD01E91263B00B02FF0 /* StoreMenuTableViewController.swift */; };
 		6FB497FB1E885C12009AA863 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FB497FA1E885C12009AA863 /* GoogleService-Info.plist */; };
@@ -80,6 +81,7 @@
 		6F4C25AF1E8BF2FE0080D9F4 /* scanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scanViewController.swift; sourceTree = "<group>"; };
 		6F525BAE1E9FC30300AFDEE5 /* FindBarcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindBarcode.swift; sourceTree = "<group>"; };
 		6F525BB11E9FFB4500AFDEE5 /* ProductView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductView.xib; sourceTree = "<group>"; };
+		6F60D8B01EA60CBF002CE987 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		6F6C877D1E8CFEA3000B3156 /* tool_extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tool_extensions.swift; sourceTree = "<group>"; };
 		6FA46CD01E91263B00B02FF0 /* StoreMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreMenuTableViewController.swift; sourceTree = "<group>"; };
 		6FB497FA1E885C12009AA863 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				6F525BAE1E9FC30300AFDEE5 /* FindBarcode.swift */,
+				6F60D8B01EA60CBF002CE987 /* Product.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				6F17C9791E4FBAC90009D126 /* LogInView.swift in Sources */,
 				6F4C25B01E8BF2FE0080D9F4 /* scanViewController.swift in Sources */,
 				6F4494031E8D402A00D7E508 /* InStoreMenuTableViewController.swift in Sources */,
+				6F60D8B11EA60CBF002CE987 /* Product.swift in Sources */,
 				6F4C25AE1E8BB9770080D9F4 /* storeCollectionViewControlerCollectionViewController.swift in Sources */,
 				6F4493FD1E8D3A2600D7E508 /* ExitStoreCellTableViewCell.swift in Sources */,
 				6F459BDC1E9F668A00B3F3C2 /* StoreDataObjects.swift in Sources */,
