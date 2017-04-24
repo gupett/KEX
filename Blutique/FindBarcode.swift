@@ -8,7 +8,7 @@
 
 import Foundation
 
-let productCodes = ["9780130676344": Product(_image: UIImage(named: "Nike_shoe")!, _description: "Very nice shoe made for all type of activities", _sizes: [41, 42, 43, 44] )]
+let productCodes = ["9780130676344": Product(_image: UIImage(named: "Nike_shoe")!, _description: "Very nice shoe made for all type of activities", _sizes: [40, 42, 43])]
 
 class FindBarcode{
     static func findBarcode(code: String) -> Product?{

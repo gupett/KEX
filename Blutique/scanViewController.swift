@@ -198,6 +198,9 @@ extension ScanViewController: OrderViewDelegate {
         // Remove all products from preOrderProductList
         preOrderList.removeAll()
         
+        // Change the product list for the view for the new state
+        orderView.products = orderedProductList
+        
         // Animate the movement of the view
         orderView.frame.origin.y = orderView.smallPossition.y - 230
         

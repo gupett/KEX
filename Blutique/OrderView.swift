@@ -131,15 +131,15 @@ class OrderView: UIView, UITableViewDelegate, UITableViewDataSource{
                 }
             case .ordered:
                 
-                // If the product list becomes empty the view should remove itself
-                if products.isEmpty{
-                    self.delegate.removeView(orderView: self)
-                }
-                
                 // only when the orderstate is .ready can a order be sent else it has already been ordered
                 if orderState == .ready{
                     delegate.placeOrderAnimation(orderView: self)
                     self.orderState = .ordered
+                }
+                
+                // If the product list becomes empty the view should remove itself
+                if products.isEmpty{
+                    self.delegate.removeView(orderView: self)
                 }
             }
             //Styles the view acording to the current state of the view
