@@ -11,11 +11,13 @@ import Foundation
 class Product{
     let image: UIImage
     let description: String
-    let sizes: [Int]
+    var sizes: [Int]
+    let brand: String
     
-    init(_image: UIImage, _description: String, _sizes: [Int]) {
+    init(_image: UIImage, _description: String, _sizes: [Int], _brand: String) {
         self.image = _image
         self.description = _description
         self.sizes = _sizes
+        self.brand = _brand
     }
 }

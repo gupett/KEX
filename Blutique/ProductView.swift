@@ -137,6 +137,7 @@ class ProductView: UIView {
     func addProductToOrder(sender: UIButton!){
         print("Product should be added with size: \(sender.titleLabel?.text)")
         removeView(sender: sender)
+        self.product.sizes = [Int((sender.titleLabel?.text)!)!]
         delegate.preOrderProduct(product: self.product)
     }
 }

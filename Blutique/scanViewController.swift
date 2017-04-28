@@ -115,7 +115,7 @@ extension ScanViewController: BarcodeScannerCodeDelegate{
     
 }
 
-//
+// MAKR: - ProductViewDelegate functions
 extension ScanViewController: ProductViewDelegate{
     
     // start scanning barcodes and dismiss product pop up, ScanDelegate method
@@ -155,12 +155,17 @@ extension ScanViewController: BarcodeScannerDismissalDelegate {
     }
 }
 
+// MARK: - OrderView delegate functions
+
 // Functions to take care of the movements of the OrderViews
 extension ScanViewController: OrderViewDelegate {
     
     // Delegate method for when the view should be big
     func animateToBigView(size: CGSize, orderView: OrderView){
         let r: CGFloat = 15
+        
+        // place the orderview on top of the view hierarchy stack, not yet tested!!!
+        self.view.window?.bringSubview(toFront: orderView)
         
         // Create the rect for the frame which the orderview lies inside, the frame must be bigger than the view containing the orders since the button will be above the and beond the bounds of the productorderView
         let frameRect = CGRect(x: self.view.bounds.midX - (orderView.bigSize.width + r*2)/2, y: self.view.bounds.midY - (orderView.bigSize.height + r*2)/2, width: orderView.bigSize.width + r*2, height: orderView.bigSize.height + r*2)

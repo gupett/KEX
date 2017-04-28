@@ -229,7 +229,6 @@ class OrderView: UIView, UITableViewDelegate, UITableViewDataSource{
         if self.state == .ready{
             self.state = State.ordered
         }
-        
     }
     
     // When a long press has been done the view should be removed and the orderList should be emptied
@@ -315,7 +314,7 @@ class OrderView: UIView, UITableViewDelegate, UITableViewDataSource{
         
         // configuring the cell
         cell.productImage.image = products[indexPath.row].image
-        cell.label.text = products[indexPath.row].description
+        cell.label.text = "\(products[indexPath.row].brand) of size \(products[indexPath.row].sizes[0])"
         cell.backgroundColor = UIColor.white
         
         return cell

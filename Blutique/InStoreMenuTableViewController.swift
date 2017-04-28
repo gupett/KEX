@@ -29,7 +29,9 @@ class InStoreMenuTableViewController: UITableViewController {
     // function will be triggered when a cell is selected
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("indexPath: \(indexPath) and row: \(indexPath.row)")
-        if indexPath.row == 1{
+        
+        // if the fourth sell is pressed exit store
+        if indexPath.row == 3{
             
             if storeNavController == nil{
                 print("storeNavController är nil, fucking fix it you idiot!")
