@@ -167,11 +167,11 @@
 		6F17C9491E4FB6C90009D126 /* Blutique */ = {
 			isa = PBXGroup;
 			children = (
-				6F6F51291EB3393E006DAD0A /* IndoorMap */,
 				6F525BAD1E9FC2E400AFDEE5 /* Networking */,
 				6F4493F71E8D1AFB00D7E508 /* SWRevealViewController */,
 				6F6C87801E8D0BB3000B3156 /* AppSetUp */,
 				6F6C877F1E8D0B87000B3156 /* Store_NavigationControllers */,
+				6F6F51291EB3393E006DAD0A /* IndoorMap */,
 				6F6C87811E8D0BDB000B3156 /* InStore_NavigationControllers */,
 				6F17C9511E4FB6C90009D126 /* Assets.xcassets */,
 				6F068D911E92D2460025B644 /* Main.storyboard */,

@@ -223,7 +223,7 @@
                         <barButtonItem key="leftBarButtonItem" image="menu" id="9Gi-Mo-a5P"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuButton" destination="9Gi-Mo-a5P" id="2d6-TB-qbk"/>
+                        <outlet property="showMenu" destination="9Gi-Mo-a5P" id="s0W-L3-Ad4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIi-1Q-Zq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
