@@ -39,6 +39,9 @@ class IndoorNavigationController: UIViewController, EILIndoorLocationManagerDele
        
         
         //Fetch location to application
+        
+        //locations to use are:
+        //storebluetique & kista-210
         let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "kista-210")
         fetchLocationRequest.sendRequest { (location, error) in
             if let location = location {
@@ -57,16 +60,19 @@ class IndoorNavigationController: UIViewController, EILIndoorLocationManagerDele
                 self.IndoorLocationView.traceThickness = 2
                 self.IndoorLocationView.wallLengthLabelsColor = UIColor.black
                 
-                /*
-                //create mapobject
-                let mapObject = MapObjectView(_image: #imageLiteral(resourceName: "shoe_icon"), _frame: CGRect(x: 0, y: 0, width: 30, height: 30 ))
-                let orientedPoint = EILOrientedPoint(x: 10.0, y: 7.0)
-                //draw mapobject in the middle of the map
                 
-                self.IndoorLocationView.drawObject(inForeground: mapObject, withPosition: orientedPoint, identifier: "shoe-image")
-                 */
-               
+                //create mapobject
+                let mapObject = MapObjectView(_image: #imageLiteral(resourceName: "shoe_icon"), _frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+                let orientedPoint = EILOrientedPoint(x: 9.5, y: 6.5)
+ 
+              
+ 
+                //Draw the map
                 self.IndoorLocationView.drawLocation(location)
+                
+                //draw mapobject in the map
+                self.IndoorLocationView.drawObject(inForeground: mapObject, withPosition: orientedPoint, identifier: "shoe-image")
+                
                 self.locationManager.startPositionUpdates(for: self.location)
             } else {
                 print("can't fetch location: \(String(describing: error))")
@@ -93,13 +99,24 @@ class IndoorNavigationController: UIViewController, EILIndoorLocationManagerDele
     }
     
     func indoorLocationManager(_ manager: EILIndoorLocationManager, didUpdatePosition position: EILOrientedPoint, with positionAccuracy: EILPositionAccuracy, in location: EILLocation) {
-        self.xValue.text = position.x.description
-        self.yValue.text = position.y.description
-        self.orientationValue.text = position.orientation.description
         
         print(String(format: "x: %5.2f, y: %5.2f, orientation: %3.0f", position.x, position.y, position.orientation))
         
+        //update position
         self.IndoorLocationView.updatePosition(position)
+        
+        //notification if in Shoe section
+        let shoe_section = EILPoint(x: 9.5, y: 6.5)
+        
+        if(position.distance(to: shoe_section) < 1)
+        {
+            let nc = NotificationCenter.default
+            nc.post(name:Notification.Name(rawValue:"Bluetique Info"),
+                    object: nil,
+                    userInfo: ["message":"Welcome to The Shoe Section"])
+        }
+        
+        
     }
 
 
