@@ -10,9 +10,9 @@ import UIKit
 
 class IndoorNavigationController: UIViewController, EILIndoorLocationManagerDelegate {
 
-    @IBOutlet weak var xValue: UILabel!
-    @IBOutlet weak var yValue: UILabel!
-    @IBOutlet weak var orientationValue: UILabel!
+    
+    //Bool that decides if alertNotification is called. Will only happen (once per section)/session
+    var launchNotification : Bool = true
     
     //Create the location manager
     let locationManager = EILIndoorLocationManager()
@@ -24,6 +24,7 @@ class IndoorNavigationController: UIViewController, EILIndoorLocationManagerDele
     @IBOutlet weak var IndoorLocationView: EILIndoorLocationView!
     
     @IBOutlet weak var showMenu: UIBarButtonItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,7 @@ class IndoorNavigationController: UIViewController, EILIndoorLocationManagerDele
         
         //locations to use are:
         //storebluetique & kista-210
-        let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "kista-210")
+        let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "storebluetique")
         fetchLocationRequest.sendRequest { (location, error) in
             if let location = location {
                 self.location = location
@@ -56,14 +57,12 @@ class IndoorNavigationController: UIViewController, EILIndoorLocationManagerDele
                 self.IndoorLocationView.showBeacons = true
                 self.IndoorLocationView.locationBorderColor = UIColor.black
                 self.IndoorLocationView.locationBorderThickness = 6
-                self.IndoorLocationView.traceColor = UIColor.blue
-                self.IndoorLocationView.traceThickness = 2
                 self.IndoorLocationView.wallLengthLabelsColor = UIColor.black
                 
                 
                 //create mapobject
-                let mapObject = MapObjectView(_image: #imageLiteral(resourceName: "shoe_icon"), _frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-                let orientedPoint = EILOrientedPoint(x: 9.5, y: 6.5)
+                let mapObject = MapObjectView(_image: #imageLiteral(resourceName: "shoe_icon"), _frame: CGRect(x: 0, y: 0, width: 70, height: 70))
+                let orientedPoint = EILOrientedPoint(x: 8.0, y: 5.0)
  
               
  
@@ -93,6 +92,7 @@ class IndoorNavigationController: UIViewController, EILIndoorLocationManagerDele
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
         }
+        
     }
     func indoorLocationManager(_ manager: EILIndoorLocationManager, didFailToUpdatePositionWithError error: Error) {
         print("failed to update position: \(error)")
@@ -106,14 +106,18 @@ class IndoorNavigationController: UIViewController, EILIndoorLocationManagerDele
         self.IndoorLocationView.updatePosition(position)
         
         //notification if in Shoe section
-        let shoe_section = EILPoint(x: 9.5, y: 6.5)
+        let shoe_section = EILPoint(x: 8.0, y: 5.0)
         
         if(position.distance(to: shoe_section) < 1)
         {
-            let nc = NotificationCenter.default
-            nc.post(name:Notification.Name(rawValue:"Bluetique Info"),
-                    object: nil,
-                    userInfo: ["message":"Welcome to The Shoe Section"])
+            //Will only launch first time in new section per session of store visit
+            if(launchNotification)
+            {
+                let alertController = UIAlertController(title: "Bluetique", message: "Welcome to The Shoe Section", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+                launchNotification = false
+            }
         }
         
         
