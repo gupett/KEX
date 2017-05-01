@@ -373,7 +373,7 @@
 				TargetAttributes = {
 					6F17C9461E4FB6C90009D126 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = XNNG56MPHN;
+						DevelopmentTeam = AQTTH8AH3D;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -660,7 +660,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XNNG56MPHN;
+				DEVELOPMENT_TEAM = AQTTH8AH3D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -668,7 +668,7 @@
 				INFOPLIST_FILE = Blutique/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = InteractiveFlow.Bluetique;
+				PRODUCT_BUNDLE_IDENTIFIER = gurraracing.Bluetique;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Blutique/Blutique-Bridging-Header.h";
@@ -684,7 +684,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XNNG56MPHN;
+				DEVELOPMENT_TEAM = AQTTH8AH3D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -692,7 +692,7 @@
 				INFOPLIST_FILE = Blutique/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = InteractiveFlow.Bluetique;
+				PRODUCT_BUNDLE_IDENTIFIER = gurraracing.Bluetique;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Blutique/Blutique-Bridging-Header.h";

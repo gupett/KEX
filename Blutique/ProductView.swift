@@ -28,6 +28,8 @@ class ProductView: UIView {
     
     @IBOutlet weak var productText: UITextView!
 
+    @IBOutlet weak var label: UILabel!
+    
     var delegate: ProductViewDelegate!
     
     var product: Product
@@ -98,6 +100,7 @@ class ProductView: UIView {
     }
     
     func setUpViewForProduct(){
+        self.label.text = product.model
         self.productImage.image = product.image
         self.productText.text = product.description
         createButtonForSizes(sizes: product.sizes)
