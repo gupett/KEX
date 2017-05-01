@@ -89,7 +89,7 @@ open class BarcodeScannerController: UIViewController {
   /// The current controller's status mode.
   var status: Status = Status(state: .scanning) {
     didSet {
-        
+        print ("status is now: \(status.state)")
       let duration = status.animated &&
         (status.state == .processing
           || oldValue.state == .processing
@@ -323,8 +323,11 @@ open class BarcodeScannerController: UIViewController {
    
   // called when the pause is ended and scaning should begin again
   public func unPause(){
+    print("should unpause")
     self.infoView.isHidden = false
     self.reset()
+    // ugly implementation to always make the session run
+    self.captureSession.startRunning()
   }
     
   /**

@@ -23,29 +23,37 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E5C-0b-45Z">
-                    <rect key="frame" x="28" y="234" width="240" height="105"/>
+                    <rect key="frame" x="28" y="272" width="240" height="85"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JLk-iM-Ung">
-                    <rect key="frame" x="28" y="20" width="240" height="196"/>
+                    <rect key="frame" x="28" y="68" width="240" height="196"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="JLk-iM-Ung" secondAttribute="height" multiplier="60:49" id="kLy-Tu-Rd0"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewz-rW-id0">
+                    <rect key="frame" x="28" y="30" width="240" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
-                <constraint firstItem="JLk-iM-Ung" firstAttribute="trailing" secondItem="E5C-0b-45Z" secondAttribute="trailing" id="Hb4-AE-dqX"/>
-                <constraint firstItem="JLk-iM-Ung" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HmZ-An-hrb"/>
-                <constraint firstAttribute="bottom" secondItem="E5C-0b-45Z" secondAttribute="bottom" constant="93" id="S4a-ph-TqI"/>
-                <constraint firstItem="JLk-iM-Ung" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bZS-6Y-ly6"/>
-                <constraint firstItem="JLk-iM-Ung" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="28" id="fPm-6W-DrV"/>
-                <constraint firstItem="E5C-0b-45Z" firstAttribute="top" secondItem="JLk-iM-Ung" secondAttribute="bottom" constant="18" id="h9w-cM-OKn"/>
-                <constraint firstItem="JLk-iM-Ung" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="sQ7-NY-hVZ"/>
-                <constraint firstItem="JLk-iM-Ung" firstAttribute="leading" secondItem="E5C-0b-45Z" secondAttribute="leading" id="yfq-3r-Oq3"/>
+                <constraint firstItem="JLk-iM-Ung" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="28" id="46d-2C-VlF"/>
+                <constraint firstItem="JLk-iM-Ung" firstAttribute="trailing" secondItem="ewz-rW-id0" secondAttribute="trailing" id="MvR-XJ-nEF"/>
+                <constraint firstItem="JLk-iM-Ung" firstAttribute="leading" secondItem="ewz-rW-id0" secondAttribute="leading" id="XNG-GX-sJd"/>
+                <constraint firstItem="JLk-iM-Ung" firstAttribute="top" secondItem="ewz-rW-id0" secondAttribute="bottom" constant="8" symbolic="YES" id="aky-5c-fNg"/>
+                <constraint firstAttribute="bottom" secondItem="E5C-0b-45Z" secondAttribute="bottom" constant="75" id="gp7-8D-4gB"/>
+                <constraint firstItem="JLk-iM-Ung" firstAttribute="leading" secondItem="E5C-0b-45Z" secondAttribute="leading" id="nzi-aH-beD"/>
+                <constraint firstItem="JLk-iM-Ung" firstAttribute="trailing" secondItem="E5C-0b-45Z" secondAttribute="trailing" id="p3H-OZ-J6b"/>
+                <constraint firstItem="E5C-0b-45Z" firstAttribute="top" secondItem="JLk-iM-Ung" secondAttribute="bottom" constant="8" symbolic="YES" id="twh-GE-dqC"/>
+                <constraint firstItem="JLk-iM-Ung" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="w4V-mD-gP4"/>
+                <constraint firstItem="JLk-iM-Ung" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="68" id="x1H-XJ-h8h"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

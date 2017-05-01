@@ -6,6 +6,17 @@
 //  Copyright © 2017 Gustav Pettersson. All rights reserved.
 //
 
+
+/*
+ Bugfix
+ 
+ * If a size in the product view is selected to quickly the camea will not start again
+ 
+ * The camera must be paused when the big oreder view is showen 
+ 
+ */
+
+
 import UIKit
 import BarcodeScanner
 import AVFoundation
@@ -82,6 +93,7 @@ extension ScanViewController: BarcodeScannerCodeDelegate{
         DispatchQueue.main.asyncAfter(deadline: delayTime) {
             // If no product was fouind an error can be raised
             if self.productFound == false{
+                print("will reset with error")
                 controller.resetWithError()
                 
                 // Show the orderViews again sheap solution to delay the showing of the orderViews for the time that the error screen is showen
@@ -97,10 +109,11 @@ extension ScanViewController: BarcodeScannerCodeDelegate{
         // network opperation should be called and no async main queue, it is just for ilustrations when there is no network-op
         DispatchQueue.main.asyncAfter(deadline: delayTime - 5){
             if let product = FindBarcode.findBarcode(code: code) {
+                
+                self.productFound = true
                 controller.pause = true
                 controller.reset(animated: true)
                 
-                self.productFound = true
                 self.scanner = controller
                 
                 // Creating productView with the found product information
@@ -127,6 +140,7 @@ extension ScanViewController: ProductViewDelegate{
         }
         
         if let barcodeScanner = scanner{
+            print("Scanner was found")
             barcodeScanner.unPause()
         }
     }
@@ -165,7 +179,7 @@ extension ScanViewController: OrderViewDelegate {
         let r: CGFloat = 15
         
         // place the orderview on top of the view hierarchy stack, not yet tested!!!
-        self.view.window?.bringSubview(toFront: orderView)
+        super.view.bringSubview(toFront: orderView)
         
         // Create the rect for the frame which the orderview lies inside, the frame must be bigger than the view containing the orders since the button will be above the and beond the bounds of the productorderView
         let frameRect = CGRect(x: self.view.bounds.midX - (orderView.bigSize.width + r*2)/2, y: self.view.bounds.midY - (orderView.bigSize.height + r*2)/2, width: orderView.bigSize.width + r*2, height: orderView.bigSize.height + r*2)
