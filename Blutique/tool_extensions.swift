@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 // Extention so that all subclasses of collectionview can call method to dismiss keyboard when tapping around on screen 
-extension StoreCollectionViewControlerCollectionViewController {
+extension StoreCollectionViewControlerCollectionViewController{
     
     func hideKeyBoardWhenTapAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))

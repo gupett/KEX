@@ -1,5 +1,8 @@
 PODS:
   - BarcodeScanner (2.0.0)
+  - EstimoteIndoorSDK (2.3.3.1):
+    - EstimoteSDK (~> 4.13)
+  - EstimoteSDK (4.14.0)
   - Firebase (3.15.0):
     - Firebase/Core (= 3.15.0)
   - Firebase/Auth (3.15.0):
@@ -33,11 +36,14 @@ PODS:
 
 DEPENDENCIES:
   - BarcodeScanner
+  - EstimoteIndoorSDK
   - Firebase
   - Firebase/Auth
 
 SPEC CHECKSUMS:
   BarcodeScanner: 266ab4b479d407b74bc4b473fa5020b4523ad9e3
+  EstimoteIndoorSDK: 4b626eeb8ddbb1c7d90cd24b1ec1340b2c63b7af
+  EstimoteSDK: 8674ac3687fddfb28d1660c0a8361a55e5da28ba
   Firebase: 2b1cdfba1cda8589f32904a697cc753322bff9d8
   FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
   FirebaseAuth: cc8a1824170adbd351edb7f994490a3fb5c18be6
@@ -46,6 +52,6 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
 
-PODFILE CHECKSUM: c523e3ae9e84e1ff64a34503e154355f1b02187d
+PODFILE CHECKSUM: 827eaa2dddd0961b7a144e8d931bc38c6cb68077
 
 COCOAPODS: 1.2.0

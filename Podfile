@@ -13,4 +13,6 @@ pod ‘Firebase/Auth’
 
 pod 'BarcodeScanner'
 
+pod ‘EstimoteIndoorSDK’
+
 end

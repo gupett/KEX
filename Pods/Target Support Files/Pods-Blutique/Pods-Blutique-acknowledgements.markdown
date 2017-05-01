@@ -27,6 +27,16 @@ Licensed under the **MIT** license
 > SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
+## EstimoteIndoorSDK
+
+Copyright 2017 Estimote, Inc. All rights reserved.
+
+
+## EstimoteSDK
+
+Copyright 2017 Estimote, Inc. All rights reserved.
+
+
 ## Firebase
 
 Copyright 2017 Google

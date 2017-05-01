@@ -3,4 +3,4 @@
 //
 
 #import "SWRevealViewController.h"
-#import <EstimoteSDK/EstimoteSDK.h>
+#import "EILIndoorSDK.h"
