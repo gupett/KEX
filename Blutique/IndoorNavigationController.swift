@@ -62,7 +62,7 @@ class IndoorNavigationController: UIViewController, EILIndoorLocationManagerDele
                 
                 //create mapobject
                 let mapObject = MapObjectView(_image: #imageLiteral(resourceName: "shoe_icon"), _frame: CGRect(x: 0, y: 0, width: 70, height: 70))
-                let orientedPoint = EILOrientedPoint(x: 8.0, y: 5.0)
+                let orientedPoint = EILOrientedPoint(x: 8.5, y: 4.7)
  
               
  
@@ -106,7 +106,7 @@ class IndoorNavigationController: UIViewController, EILIndoorLocationManagerDele
         self.IndoorLocationView.updatePosition(position)
         
         //notification if in Shoe section
-        let shoe_section = EILPoint(x: 8.0, y: 5.0)
+        let shoe_section = EILPoint(x: 8.5, y: 4.7)
         
         if(position.distance(to: shoe_section) < 1)
         {
