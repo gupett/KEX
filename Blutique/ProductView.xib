@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductView">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Jp7-hZ-AF5"/>
+                <outlet property="label" destination="ewz-rW-id0" id="fjn-MP-D6H"/>
                 <outlet property="productImage" destination="JLk-iM-Ung" id="qh4-SB-3g1"/>
                 <outlet property="productText" destination="E5C-0b-45Z" id="lSA-eb-0WS"/>
             </connections>
@@ -35,7 +36,7 @@
                         <constraint firstAttribute="width" secondItem="JLk-iM-Ung" secondAttribute="height" multiplier="60:49" id="kLy-Tu-Rd0"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewz-rW-id0">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ewz-rW-id0">
                     <rect key="frame" x="28" y="30" width="240" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <nil key="textColor"/>
