@@ -39,5 +39,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Need access to camera for scanning</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Need bluetooth access</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Need location access</string>
 </dict>
 </plist>

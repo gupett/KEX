@@ -37,6 +37,7 @@
 		6F6F512B1EB339B8006DAD0A /* IndoorNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6F512A1EB339B8006DAD0A /* IndoorNavigationController.swift */; };
 		6FA46CD11E91263B00B02FF0 /* StoreMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA46CD01E91263B00B02FF0 /* StoreMenuTableViewController.swift */; };
 		6FB497FB1E885C12009AA863 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FB497FA1E885C12009AA863 /* GoogleService-Info.plist */; };
+		6FBD774D1EB744D600C955FB /* MapObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBD774C1EB744D600C955FB /* MapObjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		6F6F512A1EB339B8006DAD0A /* IndoorNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndoorNavigationController.swift; sourceTree = "<group>"; };
 		6FA46CD01E91263B00B02FF0 /* StoreMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreMenuTableViewController.swift; sourceTree = "<group>"; };
 		6FB497FA1E885C12009AA863 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6FBD774C1EB744D600C955FB /* MapObjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapObjectView.swift; sourceTree = "<group>"; };
 		CE577A9916175DC29714CFBA /* Pods-Blutique.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blutique.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blutique/Pods-Blutique.debug.xcconfig"; sourceTree = "<group>"; };
 		D683E312CDF675431B4F9BE6 /* Pods_Blutique.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blutique.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -295,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				6F6F512A1EB339B8006DAD0A /* IndoorNavigationController.swift */,
+				6FBD774C1EB744D600C955FB /* MapObjectView.swift */,
 			);
 			name = IndoorMap;
 			sourceTree = "<group>";
@@ -370,7 +373,7 @@
 				TargetAttributes = {
 					6F17C9461E4FB6C90009D126 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = AQTTH8AH3D;
+						DevelopmentTeam = XNNG56MPHN;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -480,7 +483,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -490,6 +493,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FBD774D1EB744D600C955FB /* MapObjectView.swift in Sources */,
 				6F459BE01E9F79E900B3F3C2 /* StoreCollectionViewCell.swift in Sources */,
 				6F459BDA1E9F63A300B3F3C2 /* StoreObject.swift in Sources */,
 				6F17C9791E4FBAC90009D126 /* LogInView.swift in Sources */,
@@ -656,7 +660,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = AQTTH8AH3D;
+				DEVELOPMENT_TEAM = XNNG56MPHN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -664,7 +668,7 @@
 				INFOPLIST_FILE = Blutique/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gurraracing.Bluetique;
+				PRODUCT_BUNDLE_IDENTIFIER = InteractiveFlow.Bluetique;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Blutique/Blutique-Bridging-Header.h";
@@ -680,7 +684,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = AQTTH8AH3D;
+				DEVELOPMENT_TEAM = XNNG56MPHN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -688,7 +692,7 @@
 				INFOPLIST_FILE = Blutique/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gurraracing.Bluetique;
+				PRODUCT_BUNDLE_IDENTIFIER = InteractiveFlow.Bluetique;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Blutique/Blutique-Bridging-Header.h";
