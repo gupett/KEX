@@ -26,6 +26,18 @@ class IndoorNavigationController: UIViewController, EILIndoorLocationManagerDele
     @IBOutlet weak var showMenu: UIBarButtonItem!
     
     
+    override func viewDidAppear(_ animated: Bool) {
+        if(self.viewIfLoaded != nil && self.location != nil)
+        {
+            print("view did appear")
+            self.locationManager.startPositionUpdates(for: location)
+        }
+        else
+        {
+            print("view was loaded")
+            self.loadView()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -56,7 +68,7 @@ class IndoorNavigationController: UIViewController, EILIndoorLocationManagerDele
                 self.IndoorLocationView.showWallLengthLabels = true
                 self.IndoorLocationView.showBeacons = true
                 self.IndoorLocationView.locationBorderColor = UIColor.black
-                self.IndoorLocationView.locationBorderThickness = 6
+                self.IndoorLocationView.locationBorderThickness = 4
                 self.IndoorLocationView.wallLengthLabelsColor = UIColor.black
                 
                 
