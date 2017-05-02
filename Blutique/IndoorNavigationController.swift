@@ -74,7 +74,7 @@ class IndoorNavigationController: UIViewController, EILIndoorLocationManagerDele
                 
                 //create mapobject
                 let mapObject = MapObjectView(_image: #imageLiteral(resourceName: "shoe_icon"), _frame: CGRect(x: 0, y: 0, width: 70, height: 70))
-                let orientedPoint = EILOrientedPoint(x: 8.5, y: 4.7)
+                let orientedPoint = EILOrientedPoint(x: 6.0, y: 9.0)
  
               
  
