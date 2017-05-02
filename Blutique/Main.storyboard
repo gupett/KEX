@@ -219,16 +219,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4x-mD-XrT" customClass="EILIndoorLocationView">
-                                <rect key="frame" x="16" y="72" width="288" height="476"/>
+                                <rect key="frame" x="43" y="171" width="234" height="228"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="u4x-mD-XrT" firstAttribute="leading" secondItem="Z4e-0d-EW9" secondAttribute="leadingMargin" id="1AB-Ab-tqK"/>
-                            <constraint firstItem="Vup-fN-T6v" firstAttribute="top" secondItem="u4x-mD-XrT" secondAttribute="bottom" constant="20" id="1k7-At-X2k"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="u4x-mD-XrT" secondAttribute="trailing" id="VVJ-y8-doB"/>
-                            <constraint firstItem="u4x-mD-XrT" firstAttribute="top" secondItem="Ktx-nd-ULo" secondAttribute="bottom" constant="8" id="ngv-2I-coU"/>
+                            <constraint firstItem="u4x-mD-XrT" firstAttribute="leading" secondItem="Z4e-0d-EW9" secondAttribute="leadingMargin" constant="27" id="1AB-Ab-tqK"/>
+                            <constraint firstItem="Vup-fN-T6v" firstAttribute="top" secondItem="u4x-mD-XrT" secondAttribute="bottom" constant="169" id="1k7-At-X2k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u4x-mD-XrT" secondAttribute="trailing" constant="27" id="VVJ-y8-doB"/>
+                            <constraint firstItem="u4x-mD-XrT" firstAttribute="top" secondItem="Ktx-nd-ULo" secondAttribute="bottom" constant="107" id="ngv-2I-coU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ih6-JR-ohX">
